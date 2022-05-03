@@ -1,6 +1,6 @@
-import { Movie } from 'interfaces';
+import { Movie, MovieApiResponse } from 'interfaces';
 import { atom, selector } from 'recoil';
-import { getMovies } from 'services/movie';
+import makeRequest from 'services';
 
 export const selectedSuggestionId = atom<number | null>({
   key: 'selected-id',
@@ -8,16 +8,19 @@ export const selectedSuggestionId = atom<number | null>({
 });
 
 export const suggestionQuery = selector({
-  key: 'movie-query',
+  key: 'suggestion-query',
   get: async () => {
     try {
-      const suggestions = await getMovies({
+      const suggestions = await makeRequest<MovieApiResponse>({
         method: 'GET',
         url: 'discover/movie',
-        params: {},
+        params: {
+          sort_by: 'popularity.desc',
+          include_video: true,
+        },
       });
 
-      return suggestions;
+      return suggestions.results;
     } catch (error) {
       return [];
     }

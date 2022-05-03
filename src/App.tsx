@@ -4,6 +4,7 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 
 import { RouteProvider } from '@billers/library';
 import ErrorBoundary from 'components/commons/ErrorBoundary';
+import WatchList from 'components/pages/WatchList';
 import { RecoilRoot } from 'recoil';
 
 import Nav from './components/layout/Nav';
@@ -27,6 +28,7 @@ const App: React.FC = () => {
               }
               path="/movie/:id"
             />
+            <Route element={<WatchList />} path="/my-watchlist" />
           </Routes>
         </RouteProvider>
       </RecoilRoot>

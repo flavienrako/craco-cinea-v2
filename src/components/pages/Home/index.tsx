@@ -1,18 +1,34 @@
 import { Suspense } from 'react';
 
 import FallbackLoarders from 'components/commons/FallbackLoarders';
+import Filter from 'components/commons/Filter';
+import Pagination from 'components/commons/Pagination';
 
-import Home from './Home.ui';
+import HomeUi from './Home.ui';
 import MovieList from './MovieList';
 import Suggestion from './Suggestion';
 import SuggestionList from './SuggestionList';
 
-const Index = () => (
-  <Home
+const Home = () => (
+  <HomeUi
+    Filter={{
+      children: (
+        <Suspense fallback="">
+          <Filter />
+        </Suspense>
+      ),
+    }}
     MovieList={{
       children: (
         <Suspense fallback={<FallbackLoarders />}>
           <MovieList />
+        </Suspense>
+      ),
+    }}
+    Pagination={{
+      children: (
+        <Suspense fallback={<div />}>
+          <Pagination />
         </Suspense>
       ),
     }}
@@ -33,4 +49,4 @@ const Index = () => (
   />
 );
 
-export default Index;
+export default Home;

@@ -6,25 +6,31 @@ import { Box, Container } from "@billers/library";
 const Home = (props) => {
   const {
     ROOT,
-    zysub,
+    mbzabo,
     SuggestionList,
-    hhmeh,
-    lyiwl,
-    jxuln,
+    aalnwv,
+    noogzo,
+    affuai,
     MovieList,
-    qqynq,
+    scnpul,
     Suggestion,
-    pxcjq,
+    bkwvgs,
+    ukpvyv,
+    Pagination,
+    fbpkiy,
+    Filter,
   } = props;
   return (
     <Box {...ROOT}>
-      <Box {...qqynq} {...Suggestion} />
-      <Box {...pxcjq}>
-        <Container {...hhmeh}>
-          <Box {...zysub} {...SuggestionList} />
+      <Box {...scnpul} {...Suggestion} />
+      <Box {...bkwvgs}>
+        <Container {...aalnwv}>
+          <Box {...mbzabo} {...SuggestionList} />
         </Container>
-        <Container {...lyiwl}>
-          <Box {...jxuln} {...MovieList} />
+        <Container {...noogzo}>
+          <Box {...fbpkiy} {...Filter} />
+          <Box {...affuai} {...MovieList} />
+          <Box {...ukpvyv} {...Pagination} />
         </Container>
       </Box>
     </Box>
@@ -45,23 +51,36 @@ Home.defaultProps = {
       background: "#121212",
     },
   },
-  zysub: { tag: "div", css: { minHeight: "380px" } },
-  hhmeh: {
+  mbzabo: { tag: "div", css: { minHeight: "380px" } },
+  aalnwv: {
     maxWidth: "lg",
     disableGutters: false,
     fixed: false,
     css: { position: "relative", display: "flex", flexDirection: "column" },
   },
-  lyiwl: {
+  noogzo: {
     maxWidth: "lg",
     disableGutters: false,
     fixed: false,
     css: { marginTop: "70px", marginBottom: "70px" },
   },
-  jxuln: { tag: "div", css: { display: "flex", flexWrap: "wrap" } },
-  qqynq: { tag: "div", className: "suggestion-bg", css: { minHeight: "90vh" } },
-  pxcjq: {
+  affuai: { tag: "div", css: { display: "flex", flexWrap: "wrap" } },
+  scnpul: {
+    tag: "div",
+    className: "suggestion-bg",
+    css: { minHeight: "90vh" },
+  },
+  bkwvgs: {
     tag: "div",
     css: { position: "sticky", marginTop: "-243px", zIndex: "1" },
+  },
+  ukpvyv: {
+    tag: "div",
+    css: { marginTop: "32px", display: "flex", justifyContent: "center" },
+  },
+  fbpkiy: {
+    tag: "div",
+    id: "filter",
+    css: { marginTop: "16px", marginBottom: "16px" },
   },
 };

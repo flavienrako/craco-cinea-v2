@@ -8,26 +8,30 @@ import { selectedSuggestionState } from 'store';
 import SuggestionUi from './Suggestion.ui';
 
 const Suggestion: React.FC = () => {
-  const suggestion = useRecoilValue(selectedSuggestionState);
-  const date =
-    suggestion?.release_date &&
-    dayjs(suggestion.release_date).format('DD MMMM YYYY');
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  const { id, backdrop_path, title, vote_average, release_date } =
+    useRecoilValue(selectedSuggestionState);
+  const date = release_date && dayjs(release_date).format('DD MMMM YYYY');
 
-  return suggestion ? (
+  return id ? (
     <SuggestionUi
       date={{ date }}
-      discover={{ href: `movie/${suggestion.id}` }}
-      key={suggestion.id}
+      discover={{ href: `movie/${id}` }}
+      key={id}
       suggestionBg={{
         style: {
-          background: `center / cover no-repeat url("https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${suggestion?.backdrop_path}")`,
+          background: `center / cover no-repeat url("${
+            backdrop_path
+              ? `https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${backdrop_path}`
+              : '/images/placeholder_1920.jpg'
+          }")`,
         },
       }}
-      title={{ title: suggestion?.title }}
+      title={{ title }}
       votes={{
         children: (
           <Rating
-            defaultValue={suggestion.vote_average / 2}
+            defaultValue={vote_average / 2}
             name="size-large"
             precision={0.1}
             readOnly

@@ -28,18 +28,19 @@ $ npm run start
 
 ## Features
 
-- [ ] Home Movie list
+- [x] Home Movie list
   - [x] Suggestion carousel
-  - [ ] Pagination & page size select
-  - [ ] Filter by name, year of publication, genre
-  - [ ] Add/remove to watchlist button
-  - [ ] Card view (thumbnail, title, year, star)
+  - [x] Paginate movie by query
+  - [x] Filter year of publication, genre
+  - [x] Add/remove to watchlist button
+  - [x] Card view (thumbnail, title, year, star)
 - [ ] Movie detail
-  - [ ] Add/remove to watchlist button
-  - [x] View: thumbnail, title, description, duration, star, 10 last reviews, complete cast
+  - [x] Add/remove to watchlist button
+  - [x] View: thumbnail, title, description, star
+  - [ ] View: duration, 10 last reviews, complete cast
 - [ ] Watch list
-  - [ ] List views
-  - [ ] Action to delete movie from list
+  - [x] List views
+  - [x] Action to delete movie from list
   - [ ] Reorder list drag and drop
 
 ## Structure

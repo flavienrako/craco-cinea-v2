@@ -6,29 +6,32 @@ import { Box, ButtonIcon, Icon, Image } from "@billers/library";
 const Nav = (props) => {
   const {
     ROOT,
-    vkpcay,
-    tzmoje,
-    ouukwn,
-    konzxl,
-    pzzhdc,
-    isszod,
-    dmehad,
-    wdmhct,
-    gtrxsv,
-    wbigrh,
-    hodaxq,
+    ignodo,
+    xdotvh,
+    znvciq,
+    rrxwhs,
+    famlrk,
+    dtqlvo,
+    zfjliz,
+    gtjzlp,
+    pzasoi,
+    zlfwva,
+    thkcmp,
+    nckfpp,
+    watchList,
   } = props;
   return (
     <Box {...ROOT}>
-      <Box {...vkpcay}>
-        <Image {...gtrxsv} />
-        <Box {...konzxl}>
-          <ButtonIcon {...dmehad} Icon={<Icon {...wdmhct} />} />
-          <ButtonIcon {...pzzhdc} Icon={<Icon {...isszod} />} />
-          <ButtonIcon {...tzmoje} Icon={<Icon {...ouukwn} />} />
-          <ButtonIcon {...wbigrh} Icon={<Icon {...hodaxq} />} />
+      <Box {...ignodo}>
+        <Image {...pzasoi} />
+        <Box {...rrxwhs}>
+          <ButtonIcon {...zfjliz} Icon={<Icon {...gtjzlp} />} />
+          <ButtonIcon {...famlrk} Icon={<Icon {...dtqlvo} />} />
+          <ButtonIcon {...xdotvh} Icon={<Icon {...znvciq} />} />
+          <ButtonIcon {...zlfwva} Icon={<Icon {...thkcmp} />} />
         </Box>
       </Box>
+      <Box {...nckfpp} {...watchList} />
     </Box>
   );
 };
@@ -45,9 +48,10 @@ Nav.defaultProps = {
       paddingLeft: "8px",
       display: "flex",
       justifyContent: "flex-end",
+      alignItems: "center",
     },
   },
-  vkpcay: {
+  ignodo: {
     tag: "div",
     css: {
       borderTopLeftRadius: "110px",
@@ -65,7 +69,7 @@ Nav.defaultProps = {
       alignItems: "center",
     },
   },
-  tzmoje: {
+  xdotvh: {
     type: "button",
     disabled: false,
     disableFocusRipple: false,
@@ -73,42 +77,43 @@ Nav.defaultProps = {
     size: "medium",
     color: "secondary",
   },
-  ouukwn: {
+  znvciq: {
     color: "inherit",
     icon: "FaLinkedinIn",
     fontSize: "inherit",
     hidden: false,
   },
-  konzxl: { tag: "div" },
-  pzzhdc: {
+  rrxwhs: { tag: "div" },
+  famlrk: {
     type: "button",
     disabled: false,
     disableFocusRipple: false,
     disableRipple: false,
     color: "secondary",
   },
-  isszod: {
+  dtqlvo: {
     color: "inherit",
     icon: "FaInstagram",
     fontSize: "inherit",
     hidden: false,
   },
-  dmehad: {
+  zfjliz: {
     type: "button",
     disabled: false,
     disableFocusRipple: false,
     disableRipple: false,
     color: "secondary",
   },
-  wdmhct: {
+  gtjzlp: {
     color: "inherit",
     icon: "FaGithub",
     fontSize: "inherit",
     hidden: false,
   },
-  gtrxsv: {
+  pzasoi: {
     alt: "Image description for better SEO",
     src: "https://minio.billers.io/billers/app_v2/Me_25ff08b932.png",
+    href: "/",
     dynamic: true,
     css: {
       width: "60px",
@@ -122,17 +127,18 @@ Nav.defaultProps = {
       background: "#FFFFFF57",
     },
   },
-  wbigrh: {
+  zlfwva: {
     type: "button",
     disabled: false,
     disableFocusRipple: false,
     disableRipple: false,
     color: "secondary",
   },
-  hodaxq: {
+  thkcmp: {
     color: "inherit",
     icon: "FaPaperPlane",
     fontSize: "inherit",
     hidden: false,
   },
+  nckfpp: { tag: "div", css: { marginRight: "8px", marginLeft: "16px" } },
 };

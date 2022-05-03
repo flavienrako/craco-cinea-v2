@@ -1,11 +1,32 @@
-import React from "react";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-import Nav from "./Nav.ui";
+import InventoryIcon from '@mui/icons-material/Inventory';
+import { Badge, IconButton } from '@mui/material';
+import { useRecoilValue } from 'recoil';
+import { watchListState } from 'store/watchlist';
 
-const index = () => (
+import NavUi from './Nav.ui';
+
+const Nav: React.FC = () => {
+  const watchList = useRecoilValue(watchListState);
+  const push = useNavigate();
+
+  return (
     <div>
-      <Nav />
+      <NavUi
+        watchList={{
+          children: (
+            <Badge badgeContent={watchList.length} color="secondary">
+              <IconButton onClick={() => push('/my-watchlist')}>
+                <InventoryIcon />
+              </IconButton>
+            </Badge>
+          ),
+        }}
+      />
     </div>
   );
+};
 
-export default index;
+export default Nav;

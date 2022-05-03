@@ -21,3 +21,17 @@ export type MovieApiResponse = {
   total_pages: number;
   total_results: number;
 };
+
+export type MovieParams = {
+  year?: string;
+  with_genres?: string;
+};
+
+export type Genre = {
+  id: number;
+  name: string;
+};
+
+export type GenreResponse = {
+  genres: Genre[];
+};
