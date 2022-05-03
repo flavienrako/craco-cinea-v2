@@ -2,7 +2,7 @@
 
 This is a sample application to demonstrate the use of Recoil with React and Typescript for data-initialized application state management.
 
-You can preview this react app at: [https://dbuilder-cinea.vercel.app/](https://dbuilder-cinea.vercel.app/).
+You can preview this react app at: [https://craco-cinea-v2.vercel.app/](https://craco-cinea-v2.vercel.app/).
 
 ## Support
 
