@@ -16,7 +16,7 @@ You can preview this react app at: [https://dbuilder-cinea.vercel.app/](https://
 
 ## Start the application
 
-Copy or download the project then run
+Clone or download the project then run
 
 ```bash
 $ yarn install
@@ -26,12 +26,41 @@ $ npm install
 $ npm run start
 ```
 
-You can change the environnement variable if you want
+## Features
 
-## Todo
+- [ ] Home Movie list
+  - [x] Suggestion carousel
+  - [ ] Pagination & page size select
+  - [ ] Filter by name, year of publication, genre
+  - [ ] Add/remove to watchlist button
+  - [ ] Card view (thumbnail, title, year, star)
+- [ ] Movie detail
+  - [ ] Add/remove to watchlist button
+  - [x] View: thumbnail, title, description, duration, star, 10 last reviews, complete cast
+- [ ] Watch list
+  - [ ] List views
+  - [ ] Action to delete movie from list
+  - [ ] Reorder list drag and drop
 
-- [ ] Support offline mode PWA
-- [ ] Increase test coverage
-- [ ] Watchlist system
-- [ ] Implementation of github action CI
-- [ ] Support responsive
+## Structure
+
+```
+
+├── assets
+├── components
+|  ├── commons
+|  |  └── WatchList
+|  ├── layout
+|  |  └── Nav
+|  └── pages
+|     ├── Home
+|     |  ├── MovieList
+|     |  ├── Suggestion
+|     |  └── SuggestionList
+|     └── Movie
+├── hooks
+├── interfaces
+├── services
+└── store
+
+```
