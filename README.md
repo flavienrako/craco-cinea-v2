@@ -7,12 +7,14 @@ You can preview this react app at: [https://craco-cinea-v2.vercel.app/](https://
 ## Support
 
 - Create React App 5 powered by CRACO
-- Typescript
+  Configure and extend CRA webpack configuration
+- Typescript usefull to validate all code statically with type safe
 - Airbnb Linting style
 - Testing Library
 - Material Ui 5
 - Recoil state management
 - dbuilder [repo](https://github.com/d-builder/core)
+- react-beautiful-dnd
 
 ## Start the application
 
@@ -38,10 +40,10 @@ $ npm run start
   - [x] Add/remove to watchlist button
   - [x] View: thumbnail, title, description, star
   - [ ] View: duration, 10 last reviews, complete cast
-- [ ] Watch list
+- [x] Watch list
   - [x] List views
   - [x] Action to delete movie from list
-  - [ ] Reorder list drag and drop
+  - [x] Reorder list drag and drop
 
 ## Structure
 

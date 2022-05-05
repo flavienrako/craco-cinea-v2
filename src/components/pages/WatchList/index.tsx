@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Items from './Item';
+import Items from './Items';
 import WatchListUi from './WatchList.ui';
 
-const WatchList = () => (
+const WatchList: React.FC = () => (
   <WatchListUi
     list={{ children: <Items /> }}
     wrapper={{
