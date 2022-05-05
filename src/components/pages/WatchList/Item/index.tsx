@@ -4,6 +4,7 @@ import { Typography } from '@mui/material';
 import { useRecoilState } from 'recoil';
 import { watchListState } from 'store/watchlist';
 
+import Drag from './Drag';
 import Item from './Item.ui';
 
 const Items: React.FC = () => {
@@ -14,6 +15,8 @@ const Items: React.FC = () => {
 
     setWatchList(newList);
   };
+
+  return <Drag />;
 
   return (
     <>
